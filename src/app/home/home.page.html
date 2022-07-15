@@ -1,20 +1,32 @@
-<ion-header [translucent]="true">
+
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+        Ionic- cordova Geolocalizacion
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="ion-padding">
+    <ion-button (click)="getCurrentCoordinates()" expand="block">
+     Obtener Localizacion
+    </ion-button>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Coordenadas</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>
+        Latitud
+      </ion-label>
+      <ion-badge color="danger" slot="end">{{latitude}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Longitud
+      </ion-label>
+      <ion-badge color="danger" slot="end">{{longitude}}</ion-badge>
+    </ion-item>
+    </ion-list>    
   </div>
 </ion-content>
