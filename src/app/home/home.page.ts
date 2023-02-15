@@ -4,9 +4,10 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  styleUrls: ['home.page.scss'], 
 })
 export class HomePage {
+  
   latitude: any = 0; //latitude
   longitude: any = 0; //longitude
   constructor(

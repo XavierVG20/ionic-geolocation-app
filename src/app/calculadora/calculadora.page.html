@@ -1,0 +1,105 @@
+<ion-header >
+  <ion-toolbar>
+    
+    <ion-title>Calculadora</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-header style="  text-align: center; padding: 25px;">
+    <ion-label  >OPERACIONES BASICAS</ion-label>
+
+  </ion-header>
+ <ion-item style="  padding: 25px;">
+      <ion-label  >Valor 1</ion-label>
+    
+      <ion-input  type="number" min="1" max="100"  [(ngModel)]="num1"  required></ion-input>
+   
+ </ion-item>
+    
+    <ion-item style="  padding: 25px;" >
+      <ion-label name="v2">Valor 2</ion-label>
+      <ion-input type="number" [(ngModel)]="num2" required></ion-input>
+    </ion-item>
+   
+  
+    <!-- Radio buttons -->
+    <ion-radio-group lines="full" [(ngModel)]="relationship">
+     
+      <ion-list-header>
+        
+        <ion-item>
+          <ion-label  style="color: black;" >Operaciones</ion-label>
+
+        </ion-item>
+      </ion-list-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+      <ion-item>
+        <ion-label>sumo</ion-label>
+        <ion-radio slot="start" value="+" checked></ion-radio>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label>multiplico</ion-label>
+        <ion-radio slot="start" value="*"></ion-radio>
+      </ion-item>
+    </ion-col>
+    </ion-row>
+    
+      <ion-row>
+     <ion-col>
+      <ion-item>
+        <ion-label>resto</ion-label>
+        <ion-radio slot="start" value="-"></ion-radio>
+      </ion-item>
+     </ion-col>
+     <ion-col>
+      <ion-item>
+        <ion-label>divido</ion-label>
+        <ion-radio slot="start" value="/"></ion-radio>
+      </ion-item>
+     </ion-col>
+    </ion-row>
+       
+    </ion-grid>
+    </ion-radio-group>
+    <!-- Checkboxes -->
+    <ion-item >
+      <ion-label name="v2" >Respuesta</ion-label>
+      <ion-input type="number" [(ngModel)]="result" required></ion-input>
+    </ion-item>
+    
+    <ion-item >
+
+    <ion-row>
+      <ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col><ion-col>
+      </ion-col>
+
+    <ion-col>
+      <ion-button (click)="onSubmit()" color="success">Calcular</ion-button>
+
+    </ion-col>
+    </ion-row>
+
+    </ion-item>
+    
+   
+   
+</ion-content>
